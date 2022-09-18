@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box } from '@mui/material';
+import AddATable from './components/AddATable';
+import TableData from './components/TableData';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Box
+        sx={{
+          flexDirection: 'row',
+          p: 1,
+          m: 1,
+          bgcolor: 'background.paper',
+          borderRadius: 1,
+        }}>
+        <AddATable />
+        <TableData />
+      </Box>
     </div>
   );
-}
+};
 
 export default App;
